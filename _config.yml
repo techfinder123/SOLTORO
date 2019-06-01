@@ -4,10 +4,10 @@ subtitle:
 email: info@soltoro.co.kr
 description: Solution to Royal Business
 baseurl: "/soltoro-temp" # the subpath of your site, e.g. /blog
-url: techfinder123.github.io # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 author:
-street_address: 서울시 강남구 강남대로 152길 55, 403호 (신사동, 태영빌딩)
-city: 
+street_address: 서울시 강남구 강남대로 152길 55, 403호
+city: (신사동, 태영빌딩)
 state: 
 zip_code: 
 country: 

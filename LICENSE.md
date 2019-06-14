@@ -1,4 +1,5 @@
-Creative Commons Attribution 3.0 Unported
+# Creative Commons Attribution 3.0
+
 http://creativecommons.org/licenses/by/3.0/
 
 License

@@ -1,0 +1,36 @@
+# site settings
+title: 솔투로
+subtitle: 
+email: info@soltoro.co.kr
+description: Solution to Royal Business
+baseurl: "/soltoro-temp" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+author:
+street_address: 서울시 강남구 강남대로 152길 55, 403호
+city: (신사동, 태영빌딩)
+state: 
+zip_code: 
+country: 
+phone: 02-518-4433
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 5
+
+# social settings
+500px_url:
+facebook_url:
+github_url:
+gitlab_url: 
+googleplus_url: 
+instagram_url: 
+linkedin_url: 
+pinterest_url:
+slack_url:
+twitter_url: 
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed

@@ -1,73 +1,80 @@
-# Forty - Jekyll Theme
+# Forty Theme
 
-A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  
+Forty theme is a multi page website built around a grid of image tiles that transition into its content pages. It is a ported theme built by [HTML5 UP](https://html5up.net/). This theme contains many styled elements and features a contact form. Built for blogs, businesses, or freelancers.
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
+![Forty Screenshot](https://github.com/MarcusVirg/forty/blob/master/images/screenshot.png?raw=true)
 
-# How to Use
+For a demo go to [Forty Demo](https://html5up.net/uploads/demos/forty/).
 
-For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+## Installation
 
-- **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**: Fork this reposity and create a branch named `gh-pages`, then start editing the `_config.yml` file.
+Create a new Hugo Site and inside the site folder run the following commands:
 
-# Added Features
+    $ cd themes
+    $ git clone https://github.com/MarcusVirg/forty
 
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* Set **featured images** in front matter.
+To learn how to create a Hugo Site read the [official guide](//gohugo.io/overview/installing/) of Hugo.
 
-# Issues
+### Netlify
 
-If you would like to report a bug, ask a question, request a feature, feel free to do so on [the GitLab repository](https://gitlab.com/andrewbanchich/forty-jekyll-theme) and I will be more than happy to help!
+If you are using Netlify to host your hugo site, you will want to add it as a submodule instead of cloning:
 
-Alternatively, you can open an issue via email by emailing [incoming+andrewbanchich/forty-jekyll-theme@incoming.gitlab.com](mailto:incoming+andrewbanchich/forty-jekyll-theme@incoming.gitlab.com).
+    $ cd themes
+    $ git submodule add https://github.com/MarcusVirg/forty
 
-The GitHub repository is simply a mirror of the GitLab repository.
+This is because Netlify uses the hugo build command when autopublish is enabled and will produce an error if the theme is not a submodule. See the [Hugo Guide](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#use-hugo-themes-with-netlify) for more information.
 
-# Credits
+If your javascript or css isn't rendering, check your BaseURL frontmatter in the `config.toml` file. This needs to be set to match the URL you are publishing to. i.e. if you are publishing to https://www.yourdomain.com your frontmatter should be `BaseURL = https://www.yourdomain.com`
 
-Original README from HTML5 UP:
+## Using the theme
 
-```
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+After cloning Forty or adding it as a submodule, there are a few other things you should do:
 
+### Config File
 
-This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
-creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
-template is provided), and includes a number of neat effects (check out the menu!),
-extra features, and all the usual stuff you'd expect. Hope you dig it!
+There is an [`exampleSite`](//github.com/MarcusVirg/forty/tree/master/exampleSite) folder for this theme. Copy the file called [`config.toml`](//github.com/MarcusVirg/forty/blob/master/exampleSite/config.toml) to your websites root directory.
+Here you can customize some of the text and content on the website.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+### Change background
 
-(* = not included)
+You can change the background by replacing the banner.jpg file with your own image in the folder forty/static/img. The image must be in jpg format and the filename must be called banner.jpg otherwise it will not work.
 
-AJ
-aj@lkn.io | @ajlkn
+### Create new project/blog
 
+To create a new blog post, you can take advantage of archetypes and use the Hugo command:
 
-Credits:
+    $ cd hugoProjectDirectory
+    $ hugo new blogs/myBlog.md
 
-	Demo Images:
-		Unsplash (unsplash.com)
+Replace `myBlog.md` with your own file name. You can also just copy the markdown files from forty/exampleSite/content/blogs
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
+### Contact form
 
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
-```
+This page is static so [formspree.io](https://formspree.io/) is used to forward the message to your email. Visitors can send you up to 1,000 emails per month for free.
+You can set your email in the [`config.toml`](//github.com/MarcusVirg/forty/blob/master/exampleSite/config.toml) file. You then have to confirm your email with formspree and will begin recieving messages after you do so. I recommend only having the contact form on one page, most likely the index.html, because you have to confirm for every URL the contact form is on.
 
-Repository [Jekyll logo](https://github.com/jekyll/brand) icon licensed under a [Creative Commons Attribution 4.0 International License](http://choosealicense.com/licenses/cc-by-4.0/).
+### Preview
+
+You can see a preview of your site while developing it by running Hugo's built-in webserver.
+
+    $ hugo server -D
+
+Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser to see your site.
+
+`NOTE: In the command above -D loads content that is marked as a draft. You can switch content from draft to final by changing the frontmatter value of draft to false in the .md file for the content.`
+
+## Contributing
+
+Find a bug or want a new feature? Use the issue tracker or submit a pull request.
+
+## License
+
+This theme is released under the Creative Commons Attribution 3.0.
+For more information read the [License](//github.com/MarcusVirg/forty/blob/master/LICENSE.md).
+
+## Acknowledgements
+
+Thanks to:
+
+- AJ from [HTML5 UP](https://html5up.net/) for creating the theme
+- [Bjørn Erik Pedersen](https://github.com/bep), [Steve Francia](//github.com/spf13), [digitalcraftsman](//github.com/digitalcraftsman), and others for creating and maintaining Hugo.

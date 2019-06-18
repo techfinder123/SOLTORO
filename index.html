@@ -12,9 +12,46 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://kit.fontawesome.com/d5e603db8c.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 		 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	</head>
+	<script>
+		$(document).ready(function(){
+			$(document).ready(function(){
+     	    $('.slider').bxSlider();
+  		});
+		
+		$('.layer-close').click(function() {
+			$('.layer-pop').fadeOut(120);
+			});
+		});
+	</script>
+	<style type="text/css">
+		.layer-pop {
+			width:450px;
+			height:500px;
+			position:absolute;
+			left:30%;
+			top:50%;
+			margin-left:-200px;
+			margin-top:-200px;
+			border:1px solid #666;
+			background:#06406a;
+			z-index:9999;
+			border-radius:3px;
+		}
+		
+		.layer-close {
+			float:right;
+			padding:0px 10px;
+			font-size:15px;
+			color:#666;
+			cursor:pointer;
+			font-weight:bold;
+		}	
+	</style>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -55,7 +92,10 @@
 							</div>
 						</div>
 					</section>
-
+					<div class="layer-pop">
+						<span class="layer-close">X</span>
+						<a href="http://www.sentv.co.kr/news/view/546037" target="_blank"><img src="images/tech-banner.gif"></a>
+					</div>
 				<!-- Main -->
 					<div id="main">
 

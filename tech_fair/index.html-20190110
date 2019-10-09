@@ -95,9 +95,9 @@
 			     <td><h3>후원 : <a href="http://www.fitn.or.kr"  target="_blank"><img src="images/logo_foundation.jpg" alt="" align="center"></a></h3></td>
 			     <td align="right">
 					<select name="jump" onchange="location.href=this.value" class="footer-link-select">
-						<option value="http://www.soltoro.co.kr/site/tech_fair/home.html" selected>2016 한중기술이전설명회 </option>
-						<option value="http://www.soltoro.co.kr/site/tech_fair2/home.html">2017 한중기술심화상담회 </option>
-                        <option value="http://www.soltoro.co.kr/site/tech_fair3/home.html">2017 한중기술교류회 </option>
+						<option value="/tech_fair/home.html" selected>2016 한중기술이전설명회 </option>
+						<option value="/tech_fair2/home.html">2017 한중기술심화상담회 </option>
+                        <option value="/tech_fair3/home.html">2017 한중기술교류회 </option>
 					</select>
 			     </td>
 			   </tr>
